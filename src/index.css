@@ -1,3 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Open Sans", sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #eef0f2;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(230, 12%, 90%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(230, 12%, 80%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(230, 8%, 45%);
+}

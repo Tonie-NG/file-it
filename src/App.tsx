@@ -1,7 +1,32 @@
 import React from "react";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/nav/Navbar";
+import Error404 from "./pages/404";
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  const Layout = () => {
+    return (
+      <>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </>
+    );
+  };
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "*",
+          element: <Error404 />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
