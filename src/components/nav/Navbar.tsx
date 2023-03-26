@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./nav.css";
 
 function Nav() {
   const [active, setActive] = useState<boolean>(false);
+  const loggedIn = useSelector((state: any) => state.user.login);
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
@@ -15,9 +17,6 @@ function Nav() {
       window.removeEventListener("scroll", isActive);
     };
   }, []);
-  const user = {
-    login: false,
-  };
   return (
     <nav className={active ? "nav active" : "nav"}>
       <div className="nav__container">
@@ -31,12 +30,12 @@ function Nav() {
           <span className="nav__logo-text">File it</span>
         </div>
         <div className="nav__links-container">
-          {!user.login ? (
+          {!loggedIn ? (
             <ul className="nav__links">
-              <Link to="" className="link">
+              <Link to="/login" className="link">
                 Sign-in
               </Link>
-              <Link to="" className="link nav__button">
+              <Link to="/sign-up" className="link nav__button">
                 Sign-up
               </Link>
             </ul>
@@ -50,9 +49,6 @@ function Nav() {
               </Link>
               <Link to="" className="link ">
                 Files
-              </Link>
-              <Link to="" className="link ">
-                Logout
               </Link>
             </ul>
           )}
