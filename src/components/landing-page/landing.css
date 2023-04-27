@@ -31,7 +31,19 @@
 }
 
 .landing-page__text {
-  text-align: center;
   display: flex;
+  gap: 2rem;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.landing-page__text > span {
+  line-height: 30px;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.landing-page__text > button {
+  padding: 1rem;
+  font-size: 20px;
 }

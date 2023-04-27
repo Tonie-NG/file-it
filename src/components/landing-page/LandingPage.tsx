@@ -7,6 +7,7 @@ function LandingPage() {
     <div className="landing-page">
       <div className="landing-page__container">
         <div className="landing-page__text">
+          <h1>File-It</h1>
           <span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
             vitae deserunt ullam eius, consectetur ab. Magni fuga nam et minima?
@@ -15,14 +16,7 @@ function LandingPage() {
             necessitatibus praesentium alias quos accusantium omnis, ratione
             veritatis autem.
           </span>
-          <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            vitae deserunt ullam eius, consectetur ab. Magni fuga nam et minima?
-            Facere quo neque laudantium atque eos, vel consequuntur deserunt
-            earum cupiditate nobis. Repudiandae voluptatem mollitia blanditiis
-            necessitatibus praesentium alias quos accusantium omnis, ratione
-            veritatis autem.
-          </span>
+          <button>Get started</button>
         </div>
         <div className="landing-page__image">
           <img src={`${Illustration}`} alt="" />
